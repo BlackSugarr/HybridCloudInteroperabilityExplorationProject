@@ -1,0 +1,23 @@
+'''
+Copyright (c) 2015 Meng Li
+
+Student number: 616805 | Student name: Meng Li 
+
+This program is part of the 25 point distributed computing project.
+Run this playbook, then deploy all the services needed for the Twitter Harvester.
+'''
+
+- name: Deploy the new instance
+  hosts: twitterservers
+  sudo: yes
+
+  roles:
+    - fixSudoProblem
+    - deployBasicServices
+    - oracleJDK8
+    - couchdb
+    - couchdb-python
+    - uploadSourcecode
+    - supervisor
+
+  

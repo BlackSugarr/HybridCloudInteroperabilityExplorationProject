@@ -1,0 +1,42 @@
+# install the python2.7.9.tgz
+
+- name: Upload python2.7.9 package
+  copy:
+    src={{ filename }}
+    dest=/home/{{ user }}
+    owner={{ user }}
+    group={{ user }}
+    mode=0644
+
+- name: Upload the shell file1
+  copy:
+    src={{ shell_runner_filename1 }}
+    dest=/home/{{ user }}
+    owner={{ user }}
+    group={{ user }}
+    mode=0644
+
+- name: Upload the shell file2
+  copy:
+    src={{ shell_runner_filename2 }}
+    dest=/home/{{ user }}
+    owner={{ user }}
+    group={{ user }}
+    mode=0644
+
+- name: Run the shell untar script
+  shell: sh /home/ubuntu/{{ shell_runner_filename1 }}
+
+- name: Run the shell install script
+  shell: sh /home/ubuntu/{{ shell_runner_filename2 }}
+
+
+
+
+
+
+
+
+
+
+

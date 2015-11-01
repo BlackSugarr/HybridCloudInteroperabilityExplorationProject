@@ -1,0 +1,8 @@
+---
+user: "ubuntu" 
+directory: "Python-2.7.9"
+filename: "{{ directory }}.tgz"
+shell_runner_filename1: "untar.sh"
+shell_runner_filename2: "install.sh"
+python_path: "/usr/bin/python"
+pip_path: "/usr/bin/pip"
